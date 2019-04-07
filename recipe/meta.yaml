@@ -1,5 +1,5 @@
 {% set name = "dials-dependencies" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7e912e0f2a3e6e8b72ba3635f50b8adb49e3a7f2f4198a39200ec0d5129dcd2f
+  sha256: cabd0e136a2d888f96eeb006887fb67546dc15284d5e3933ab442319dc9d0b2e
 
 build:
   noarch: python
@@ -24,6 +24,10 @@ requirements:
 test:
   imports:
     - dials_dependencies
+  requires:
+    - pytest
+  commands:
+    - py.test --pyargs dials_dependencies
 
 about:
   home: https://dials.github.io
