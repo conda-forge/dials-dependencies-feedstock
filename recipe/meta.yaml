@@ -1,5 +1,5 @@
 {% set name = "dials-dependencies" %}
-{% set version = "0.8.0" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a7feabcdd4c2701b819f030bbc03806fc08a4b9820e4e1f41c0559380f39e2cf
+  sha256: 5e677bd7206188e3269fb8433afae0320f3c3758e62807438a2d9b6d68da688a
 
 build:
   noarch: python
